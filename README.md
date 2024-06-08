@@ -8,3 +8,5 @@ For making migrations folder
 For migrate   
 
     python manage.py migrate
+
+    from job_board.models import JobPosting
