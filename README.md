@@ -1,1 +1,4 @@
 # Django
+
+    env\Scripts\activate   
+    
