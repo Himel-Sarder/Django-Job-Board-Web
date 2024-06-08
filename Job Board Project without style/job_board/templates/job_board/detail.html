@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job_Board</title>
+</head>
+<body>
+    <ul>
+        <li>{{ posting.title }}</li>
+        <li>{{ posting.company }}</li>
+        <li>${{ posting.salary }}</li>
+        <li>{{ posting.location }}</li>
+        <li>Active? {{ posting.is_active }}</li>
+        <hr>
+        <li>{{ posting.description }}</li>
+    </ul>
+
+</body>
+</html>
