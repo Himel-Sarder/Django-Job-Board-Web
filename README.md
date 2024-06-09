@@ -25,9 +25,9 @@ Dark Mode
 ![image](https://github.com/Himel-Sarder/Django-Job-Board-Webpage/assets/143216886/611da289-f7b9-4fc7-a19b-457c2834243d)
 ![image](https://github.com/Himel-Sarder/Django-Job-Board-Webpage/assets/143216886/79703059-2418-437c-be7c-2ce5e2d5c62c)
 
-
-
-
+## Admin pannel Screenshot   
+![image](https://github.com/Himel-Sarder/Django-Job-Board-Webpage/assets/143216886/c6dc69d7-5ada-4544-90c3-c3f69f0017f2)
+![image](https://github.com/Himel-Sarder/Django-Job-Board-Webpage/assets/143216886/b6c6432d-db5a-4db7-aa90-c67a51ce577e)
 
 ## Project Overview
 This project is a job board web application built with Django. Users can view job postings, see detailed information about each job, and toggle between light and dark themes. The site is styled with Tailwind CSS and includes features such as dynamic content rendering and theme persistence using local storage.
