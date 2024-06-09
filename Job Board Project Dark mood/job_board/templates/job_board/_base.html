@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f0f4f8; /* Light gray background color */
+            font-family: Arial, sans-serif;
+            color: #003366; /* Dark gray text color */
+        }
+        .dark-mode {
+            background-color: #121212; /* Dark background color */
+            color: #ffffff; /* Light text color */
+        }
+        .dark-mode header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .dark-mode footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif; /* Professional font for headings */
+        }
+        header {
+            background-color: #18484b;
+            color: #ffffff;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            background-color: #18484b;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        .main-content {
+            min-height: calc(100vh - 160px); /* Full height minus header and footer */
+            padding-top: 1rem;
+            padding-bottom: 2rem; /* Add padding at the bottom */
+        }
+        .custom-font {
+            font-family: 'Courier New', Courier, monospace; /* Example of a custom font */
+        }
+        .dark-mode .custom-font {
+            color: #ffffff;
+        }
+        .toggle-btn {
+            background-color: #249ca0;
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 0.375rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+        .toggle-btn:hover {
+            background-color: #1e7a80;
+            transform: scale(1.05);
+        }
+        .toggle-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(36, 156, 160, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container mx-auto text-center">
+            <h1>
+                <a href="{% url 'home' %}" class="text-white text-6xl font-bold hover:text-blue-300 custom-font">
+                    💼Job Board
+                </a>
+            </h1>
+        </div>
+    </header>
+    <button id="dark-mode-toggle" class="toggle-btn">Dark Mode</button>
+    <div class="container mx-auto main-content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <footer>
+        <div class="container mx-auto">
+            <p>&copy; 2024 Himel Sarder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check local storage for dark mode preference
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+
+        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            // Save preference to local storage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
