@@ -1,0 +1,17 @@
+{% extends 'job_board/_base.html' %}
+
+{% block content %}
+    <div class="flex justify-center w-10/12 mx-auto flex-wrap gap-6">
+        {% for posting in job_postings %}
+        <a class="w-5/6 text-center" href="{% url 'job_details' posting.pk %}">
+            <div style="border: 1px solid #fafafa; border-radius: 0.375rem; padding: 2rem; background-color: #249ca0;; transition: background-color 0.3s ease; cursor: pointer;" onmouseover="this.style.backgroundColor='#a8e1ea';" onmouseout="this.style.backgroundColor='#249ca0';">
+                <p class="text-2xl pb-2">{{ posting.title }}</p>
+                <hr class="py-2">
+                <p class="font-semibold pb-2">Company: {{ posting.company }}</p>
+                <p class="text-xl pb-2">Salary: ${{ posting.salary }}</p>
+                <p class="underline underline-offset-2 text-blue-200 hover:text-red-500">View Details</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock content %}
