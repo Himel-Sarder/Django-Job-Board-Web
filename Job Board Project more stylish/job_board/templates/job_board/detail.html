@@ -1,0 +1,23 @@
+{% extends 'job_board/_base.html' %}
+
+{% block content %}
+<div class="w-10/12 mx-auto bg-white p-8 shadow-lg rounded-md mt-8">
+    <p class="pb-6">
+        <a href="{% url 'home' %}" class="border border-gray-400 rounded px-4 py-2 hover:bg-gray-200">
+            Go back
+        </a>
+    </p>
+    <h1 style="font-size: 3rem; font-weight: 600; padding-bottom: 1rem; text-decoration: underline; text-decoration-offset: 8px; color: #175c63">
+        {{ posting.title }}
+    </h1>
+    <p style="padding-bottom: 2rem; font-size: 2rem; font-weight: 600; color: #368287;">
+        Company: {{ posting.company }}
+    </p>
+    <p style="padding-bottom: 2rem; font-size: large; font-weight: 600; color: #1d969f;">
+        Salary: ${{ posting.salary }}
+    </p>
+    <p style="color: #21aab5;">
+        Description: {{ posting.description }}
+    </p>
+</div>
+{% endblock content %}
