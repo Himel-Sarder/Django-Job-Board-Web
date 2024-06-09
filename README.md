@@ -50,7 +50,7 @@ This project is a job board web application built with Django. Users can view jo
 ## Installation
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/django-job-board.git
+   git clone https://github.com/Himel-Sarder/Django-Job-Board-Webpage.git
    cd django-job-board
    ```
 
