@@ -92,33 +92,6 @@ This project is a job board web application built with Django. Users can view jo
 - **Job Details**: Click on any job posting to see detailed information about the job.
 - **Dark Mode**: Use the "Toggle Dark Mode" button in the top right corner to switch between light and dark themes.
 
-## Project Structure
-```
-django-job-board/
-│
-├── job_board/                  # Django application directory
-│   ├── migrations/             # Database migrations
-│   ├── static/                 # Static files (CSS, JS, images)
-│   ├── templates/              # HTML templates
-│   ├── admin.py                # Admin interface configuration
-│   ├── apps.py                 # Application configuration
-│   ├── models.py               # Database models
-│   ├── tests.py                # Unit tests
-│   ├── urls.py                 # URL routing
-│   └── views.py                # View functions
-│
-├── job_board_project/          # Project configuration directory
-│   ├── settings.py             # Project settings
-│   ├── urls.py                 # Project URL routing
-│   ├── wsgi.py                 # WSGI configuration
-│   └── asgi.py                 # ASGI configuration
-│
-├── manage.py                   # Django management script
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project README
-```
-
-
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
